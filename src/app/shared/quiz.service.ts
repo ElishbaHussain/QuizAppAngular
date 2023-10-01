@@ -43,6 +43,6 @@ export class QuizService {
     var body= JSON.parse(localStorage.getItem('Participant'));
     body.Score = this.correctQuetionCount;
     body.TimeSpent=this.seconds
-    return this.http.post(this.rootUrl+"/api/UpdateOutput", body)
+    return this.http.post(this.rootUrl+'/api/UpdateOutput', body)
   }
 }

@@ -37,7 +37,7 @@ if(parseInt(localStorage.getItem('qnProgress'))==10){
     localStorage.setItem('qnProgress',"0")
     localStorage.setItem('qns',"")
     localStorage.setItem('seconds',"0")
-    this.router.navigate(['/quiz'])
+    this.router.navigate(['/'])
   }
 
 }
