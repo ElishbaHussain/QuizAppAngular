@@ -7,7 +7,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { ResultComponent } from './result/result.component';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
+import { QuizService } from './shared/quiz.service';
+import { authGuard } from './auth/auth.guard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,10 +21,10 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
-   
+    HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [QuizService, authGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

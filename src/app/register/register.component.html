@@ -16,7 +16,7 @@
                 
               
         
-                <form #registerForm="ngForm">
+                <form #registerForm="ngForm" (ngSubmit)="OnSubmit(Name.value, Email.value)">
                     
                     <div class="row">
                        
